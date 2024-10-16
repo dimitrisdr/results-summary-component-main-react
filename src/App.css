@@ -1,0 +1,249 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    font: inherit;
+}
+
+p {
+    max-width: 65ch;
+}
+
+h1, h2, h3 {
+    line-height: 1.1;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+body {
+    line-height: 1.6;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+/* custom properties */
+
+:root {
+/* Primary */
+
+--Light-red: 0 100% 67%;
+--Orangey-yellow: 39 100% 56%;
+--Green-teal: 166 100% 37%;
+--Cobalt-blue: 234 85% 45%;
+
+/* Gradients */
+
+--Light-slate-blue-background: hsl(252, 100%, 67%);
+--Light-royal-blue-background: hsl(241, 81%, 54%);
+--Violet-blue-circle: hsla(256, 72%, 46%, 1);
+--Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+/* Neutral */
+
+--White: hsl(0, 0%, 100%);
+--Pale-blue: hsl(221, 100%, 96%);
+--Light-lavender: hsl(241, 100%, 89%);
+--Dark-gray-blue: hsl(224, 30%, 27%);
+/* clr-opacity */
+--clr-opacity:0.1;
+}
+
+/* utility classes */
+
+.grid-item {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.flex-item {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.stat-box-title {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+}
+
+.stat-box-title::before {
+    content:'';
+    width: 1.2rem;
+    aspect-ratio: 1;
+    background-image:var(--icon-url);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.stat-box-item-0 {
+    background-color: hsl(var(--Light-red) / var(--clr-opacity));
+}
+
+.stat-box-title-0 {
+    color: hsl(var(--Light-red));
+}
+
+.stat-box-item-1 {
+    background-color: hsl(var(--Orangey-yellow) / var(--clr-opacity));
+}
+
+.stat-box-title-1 {
+    color: hsl(var(--Orangey-yellow));
+}
+
+.stat-box-item-2 {
+    background-color: hsl(var(--Green-teal) / var(--clr-opacity));
+}
+
+.stat-box-title-2 {
+    color: hsl(var(--Green-teal));
+}
+
+.stat-box-item-3 {
+    background-color: hsl(var(--Cobalt-blue) / var(--clr-opacity));
+}
+
+.stat-box-title-4 {
+    color: hsl(var(--Cobalt-blue));
+}
+
+.txt-white {
+    color: var(--White);
+}
+
+.txt-pale-blue {
+    color: var(--Pale-blue);
+}
+
+.txt-light-lavender {
+    color: var(--Light-lavender);
+}
+
+.txt-dark-gr-blue {
+    color: var(--Dark-gray-blue);
+}
+
+.info-container {
+    padding: 1.5rem;
+}
+
+.stat-box-item {
+    justify-content: space-between;
+}
+
+/* main */
+
+.summary-container {
+    background:linear-gradient(180deg,
+        var(--Light-slate-blue-background),
+        var(--Light-royal-blue-background)
+    );
+    padding: 1.5rem;
+    place-items: center;
+    border-radius: 0 0 24px 24px;
+}
+
+.summary__info-container {
+    --gap:0.5rem;
+    text-align: center;
+    max-width: 35ch;
+    text-wrap: balance;
+}
+
+.info-text {
+    line-height: 1.4;
+}
+
+.stats-container {
+    width: 9rem;
+    gap: 0;
+    aspect-ratio: 1;
+    place-content: center;
+    box-shadow: inset 0 0 60px 5px var(--Violet-blue-circle);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.main-perc {
+    display: block;
+    font-size: 3.2rem;
+}
+
+.secondary-perc {
+    color: hsl(241 100% 89% / .5);
+}
+
+.stat-box-item {
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.continue-btn {
+    background-color: var(--Dark-gray-blue);
+    border-radius: 100vw;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.continue-btn:hover, .continue-btn:focus {
+    background-color: var(--Light-royal-blue-background);
+}
+
+@media screen and (max-width: 37.999em) {
+    .main {
+        max-width: 28em;
+    }
+}
+
+@media screen and (min-width:38em) {
+    .main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 45rem;
+        border-radius: 24px;
+        box-shadow: 0 10px 10px 5px hsl(var(--Cobalt-blue) / 0.2);
+    }
+
+    
+    .summary-container {
+        border-radius: 24px;
+    }
+
+    .info, .summary-title, .title {
+        font-size: 1.325rem;
+    }
+}
+
+
+/* <li className="stat-box-item flex-item bg-l-red">
+<div className="stat-box-title txt-l-red fw-500">Reaction</div>
+<div className="stat-box-perc"><span className="fw-700">80</span> / 100</div>
+</li>
+<li className="stat-box-item flex-item bg-or-yellow ">
+<div className="stat-box-title txt-or-yellow">Memory</div>
+<div className="stat-box-perc"><span className="fw-700">92</span> / 100</div>
+</li>
+<li className="stat-box-item flex-item bg-green-teal">
+<div className="stat-box-title txt-green-teal fw-500">Verbal</div>
+<div className="stat-box-perc"><span className="fw-700">61</span> / 100</div>
+</li>
+<li className="stat-box-item flex-item bg-cob-blue">
+<div className="stat-box-title txt-cob-blue fw-500">Visual</div>
+<div className="stat-box-perc"><span className="fw-700">72</span> / 100</div>
+</li> */
