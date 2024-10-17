@@ -1,13 +1,13 @@
 import { useState } from 'react'
-import Summary from './summary'
-import Info from './info'
-import './App.css'
+import Summary from './components/summary'
+import Info from './components/info'
+import './styles/App.css'
 
 function App() {
 
   return (
-    <main className='main'>
-      <Summary />
+    <main clasclassName='main'>    
+    <Summary />
       <Info/>
     </main>
   )
