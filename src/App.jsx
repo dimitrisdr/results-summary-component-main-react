@@ -6,7 +6,7 @@ import './styles/App.css'
 function App() {
 
   return (
-    <main clasclassName='main'>    
+    <main className='main'>    
     <Summary />
       <Info/>
     </main>

@@ -207,6 +207,8 @@ body {
 }
 
 .continue-btn {
+    border: none;
+    padding: 0.5rem;
     background-color: var(--Dark-gray-blue);
     border-radius: 100vw;
     transition: background-color 0.2s ease-in-out;
