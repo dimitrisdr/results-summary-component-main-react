@@ -3,7 +3,7 @@ export default function StatBoxItem({item, i}) {
         <li className={`stat-box-item stat-box-item-${i} flex-item`}>
             <div
                 className={`stat-box-title stat-box-title-${i} fw-500`}
-                style={{'--icon-url':`url(${item.icon})`}} 
+                style={{'--icon-url':`url(${item.icon.split('./')[1]})`}} 
                 >{item.category}
                 
             </div>
