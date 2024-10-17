@@ -242,21 +242,3 @@ body {
         font-size: 1.325rem;
     }
 }
-
-
-/* <li className="stat-box-item flex-item bg-l-red">
-<div className="stat-box-title txt-l-red fw-500">Reaction</div>
-<div className="stat-box-perc"><span className="fw-700">80</span> / 100</div>
-</li>
-<li className="stat-box-item flex-item bg-or-yellow ">
-<div className="stat-box-title txt-or-yellow">Memory</div>
-<div className="stat-box-perc"><span className="fw-700">92</span> / 100</div>
-</li>
-<li className="stat-box-item flex-item bg-green-teal">
-<div className="stat-box-title txt-green-teal fw-500">Verbal</div>
-<div className="stat-box-perc"><span className="fw-700">61</span> / 100</div>
-</li>
-<li className="stat-box-item flex-item bg-cob-blue">
-<div className="stat-box-title txt-cob-blue fw-500">Visual</div>
-<div className="stat-box-perc"><span className="fw-700">72</span> / 100</div>
-</li> */
