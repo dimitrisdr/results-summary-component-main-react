@@ -1,5 +1,5 @@
 import StatBoxItem from './statBoxItem';
-import data from '/data.json';
+import data from '../data.json'
 
 
 export default function Info() {
