@@ -151,7 +151,7 @@ body {
 
 @font-face {
     font-family: 'Hanken Grotesk';
-    src: url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
+    src: url('/results-summary-component-main-react/assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
 }
